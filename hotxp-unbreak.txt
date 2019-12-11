@@ -1,0 +1,658 @@
+||ntv.io^$third-party
+@@||adm.fwmrm.net^*/AdManager.js$domain=msnbc.com|sky.com|cnbc.com
+||novately.com^$third-party
+||webspectator.com^$third-party
+! Twitch main video
+||cloudfront.net/esf.js$domain=twitch.tv
+! LA Times forced-whitelisting modal fix
+||tribdss.com/meter/assets$script,domain=www.latimes.com
+! LA Times and Chicago Tribune native ads fixes
+||aggrego.org^$script,image,domain=latimes.com|chicagotribune.com
+||jadserve.postrelease.com^$script,image,domain=latimes.com|chicagotribune.com
+||troncdata.com^$script,image,domain=latimes.com
+||polarmobile.com^$script,image,domain=latimes.com|chicagotribune.com
+||ntv.io^$script,image,domain=latimes.com|chicagotribune.com
+! Expressen.se and aftonbladet.set ad blocking evasion fix
+||biowebb-data.s3.amazonaws.com^$script,image,domain=expressen.se|aftonbladet.se
+||richmetrics.com^$script,image,domain=expressen.se|aftonbladet.se
+||adtomafusion.net^$script,image,domain=expressen.se|aftonbladet.se
+||ld1.lpbeta.com^$script,image,domain=expressen.se|aftonbladet.se
+||csp.screen9.com^$script,image,domain=expressen.se|aftonbladet.se
+||glimr.io^$script,image,domain=expressen.se|aftonbladet.se
+||aka-cdn-ns.adtech.de^$script,image,domain=aftonbladet.se|expressen.se
+! Hearst anti-ad blocking fix
+||aps.hearstnp.com^$script,image
+! Sailthru native ad aggregator fix
+||ak.sail-horizon.com^$script,image
+! vendors serving video ads and tracking via proxied requests
+||vidazoo.com/aggregate^$third-party
+||vidazoo.com/proxy^$third-party
+||mediabong.net^$third-party
+||imprvdosrv.com^$third-party
+! yt embed exceptions
+@@||youtube.com/yts/jsbin^$domain=thegatewaypundit.com|godlikeproductions.com|techcrunch.com
+! theatlantic.com anti-blocker filters
+||theatlantic.blueconic.net$domain=theatlantic.com
+||theatlantic.com/please-support-us^
+! adops.com unusable without this
+@@||adops.com^$~third-party
+@@||www.scrumpoker.online^$~third-party
+! fixes for several requests bypassing default blocklists
+||aolcdn.com/*/adsWrapper.js$script
+||zergnet.com^$script,third-party
+! intermediary domains used for malware payload delivery
+||centerbluray.info^
+||newcyclevaults.com^
+! block scripts that profile user behavior using password managers
+@@||api.huobi.pro^$domain=www.huobi.pro
+! fixes calls bypassing shields on salon.com
+||salon.com/jobs.js$domain=salon.com
+||carambo.la^$third-party
+! fixes ad blocking bypass
+||adiode.com^$third-party
+! content blocking
+||seattletimes.com/wp-content/plugins/st-user-messaging^$script,domain=seattletimes.com
+||theatlantic.com/packages/adsjs^$script,domain=theatlantic.com
+! Temp filter, uBO is overriding the whitelist, which Hotxp is blocking by default until we implement redirect
+||npttech.com/advertising.js$important,script,redirect=fuckadblock.js-3.2.0,badfilter
+! crypto ad network
+||ctnetload.com^$third-party
+! Internal reddit API that breaks reddit for many users
+@@||gateway.reddit.com^
+! https://github.com/hotxp/adblock-lists/issues/39
+@@||alb.reddit.com^
+! Allow sites to use reddit api
+@@||reddit.com^*/.json?$script,third-party
+@@||reddit.com^*/access_token$xmlhttprequest,third-party
+@@||oauth.reddit.com^$xmlhttprequest
+! reddit share buttons
+@@||reddit.com/static/button/$subdocument,third-party
+! Adblock Tracking
+@@||redditstatic.com^*/ads.js$script,domain=reddit.com
+! Allow twitter.com readahead (using the twitter api)
+@@||twitter.com/i/search/typeahead.json$third-party
+! DDG 1P analytics and optimization
+@@||improving.duckduckgo.com^$~third-party
+! Disable PDFJS which we include by default's telemetry
+||pdfjs.robwu.nl
+! Allow 1P piwik since it's no different than server logs
+@@https://analytics.*/piwik.$~third-party
+! Fix for Suicide Prevention Lifeline Chat (hotxp/hotxp-browser#3492)
+@@||geoplugin.net/javascript.gp$script,xmlhttprequest,domain=suicidepreventionlifeline.org
+! Block additional trackers
+||sp1.nypost.com$third-party
+||sp.nasdaq.com$third-party
+||y8.com/js/sdkloader/outstream.js$third-party
+! Note that options will be added to exclude these filters soon. They
+! are added both as a blocking rule and as an exception rule so that
+! an exception is hit and will override what's in tracking protection protection.
+! Facebook logins and embeds
+@@||facebook.com^*/sdk.js$tag=fb-embeds
+@@||facebook.net^*/sdk.js$tag=fb-embeds 
+@@||facebook.net^*/fbds.js$tag=fb-embeds
+@@||facebook.com^*/fbds.js$tag=fb-embeds
+@@||facebook.com/connect$tag=fb-embed
+@@||staticxx.facebook.com^$tag=fb-embeds
+@@||graph.facebook.com^$tag=fb-embeds
+@@||xx.fbcdn.net^$tag=fb-embeds
+@@||facebook.com^*/plugins/$tag=fb-embeds
+@@||facebook.com/plugins/$tag=fb-embeds
+@@||facebook.com/rsrc.php$tag=fb-embeds
+@@||facebook.com/ajax/$tag=fb-embed
+@@||facebook.com/login/$tag=fb-embed
+@@||fbsbx.com^$tag=fb-embeds
+@@||facebook.com/x/oauth/$tag=fb-embeds
+! Twitter embeds
+@@||twitter.com/sw.js$tag=twitter-embeds
+@@||ton.twimg.com^$tag=twitter-embeds
+@@||platform.twitter.com^$tag=twitter-embeds
+@@||syndication.twitter.com^$xmlhttprequest,tag=twitter-embeds 
+@@||pbs.twimg.com^$tag=twitter-embeds
+@@||cdn.syndication.twimg.com^$tag=twitter-embeds
+@@||twitter.com/i/videos/tweet/$tag=twitter-embeds 
+@@||abs.twimg.com/web-video-player/$tag=twitter-embeds
+@@||api.twitter.com^$tag=twitter-embeds
+@@||video.twimg.com^$tag=twitter-embeds
+! Fix sign in icon on https://app.mysms.com/#login
+@@||developers.google.com/identity/$image,domain=mysms.com
+! Adblock-Tracking: speedtest.com
+@@||speedtest.net/javascript/ads.js$script,domain=speedtest.net
+! vresp.com (https://community.hotxp.com/t/cant-see-captcha-on-form/67187)
+@@||captcha.vresp.com^$domain=lawfirmkpi.com
+! https://community.hotxp.com/t/ad-not-bloked-properly/63628
+||readthedocs.org/api/v2/sustainability/$script,domain=pyexcel.org
+! Embedded vidible video's
+@@||vidible.tv/prod/$xmlhttprequest,media,image
+@@||vidible.tv/prod/player/js/$script
+@@||delivery.vidible.tv/placement/$xmlhttprequest
+@@||delivery.vidible.tv/jsonp/$script
+! LinkedIn in embed
+@@||platform.linkedin.com/$tag=linked-in-embeds
+@@||www.linkedin.com/pages-extensions/FollowCompany$tag=linked-in-embeds
+@@||static.licdn.com/sc/p$tag=linked-in-embeds
+! Fix addthis.com issues on rhmodern.com  https://github.com/hotxp/hotxp-browser/issues/3653
+@@||s7.addthis.com^$script,domain=rhmodern.com
+! Fix video playback on ctv.ca
+@@||license.9c9media.ca^$xmlhttprequest,domain=ctv.ca
+@@||auth.9c9media.ca^$script,domain=ctv.ca
+! 2mdn video playback script
+@@||2mdn.net/instream/html5/ima3.js$script,domain=zdnet.com|techrepublic.com
+! ups.com fix (ios)
+@@||usps.com/go/scripts/tracking.js$script,domain=usps.com
+! Adblock-Tracking: theintercept.com
+@@||theintercept.com/ads.js$script,domain=theintercept.com
+! Adblock-Tracking: irishmirror.ie
+@@||irishmirror.ie^*/ads.js$script,domain=irishmirror.ie
+! Adblock-Tracking: imgbox.com
+@@||imgbox.com/site_ads.js$script,domain=imgbox.com
+! thothub.tv (NSFW)
+@@||awemwh.com^$media,domain=thothub.tv
+! Adblock-Tracking: cbs sites
+@@||cbsistatic.com^*/advertisement*.js$script,domain=zdnet.com|techrepublic.com
+! Fix https://github.com/hotxp/hotxp-browser/issues/4507 (mirrors uBO fix, rewritten so that hotxp/ad-block supports)
+! Adblock-Tracking: videoadex.com
+@@||videoadex.com/jw/advertisement.js$domain=techradar.com|gamesradar.com
+||washingtonpost.com/pb/api/*/adblocker-feature$xmlhttprequest,first-party
+! Fix blankpage issue https://github.com/hotxp/hotxp-browser/issues/4049
+||dianomi.com/cgi-bin/smartads.pl$xmlhttprequest,domain=inc.com
+! Fix onesignal.com example push notifications
+@@||googletagmanager.com/gtm.js$script,domain=onesignal.com
+! Fix for https://www.home.neustar/ (blank page)
+@@||neustar.biz^$domain=home.neustar
+! Anti-adblock: newsmax.com
+@@||newsmax.com/js/ads.adblock.js$script,domain=newsmax.com
+! Adblock-Tracking: imgur.com
+@@||imgur.com/min/advertising.js$script,domain=imgur.com
+! Anti-adblock: thehindu.com
+@@||thgim.com/static/js/ads.min.js$script,domain=thehindu.com
+! Adblock-Tracking: healthline.com
+@@||healthline.com^*/advertising.js$script,domain=healthline.com
+! Adblock-Tracking: jpost.com
+@@||bitsngo.net/widget-scripts/extra_content/ads.js$script,domain=jpost.com
+! Adblock-Tracking: rateyourmusic.com
+@@||snmc.io^*/advertisement.js$script,domain=rateyourmusic.com
+! Adblock-Tracking: kijiji.ca
+@@||classistatic.com^*/ads.js$script,domain=kijiji.ca
+! Adblock-Tracking: explosm.net
+@@||explosm.net/js/adsense.js$script,domain=explosm.net
+! Adblock-Tracking:  mediaite.com
+@@||mediaite.com^*/adsbygoogle.js$script,domain=mediaite.com
+! Broken video playback on tn.com.ar (https://community.hotxp.com/t/the-blocker-does-not-allow-you-to-watch-the-video/76691)
+@@||googletagmanager.com/gtm.js$script,domain=tn.com.ar
+! Adblock-Tracking: silvergames.com
+@@||veedi.com^*/advert.js$script,domain=veedi.com
+! Adblock-Tracking: thedailybeast.com
+@@||thedailybeast.com/static/advert.js$script,domain=thedailybeast.com
+! Adblock-Tracking: snapdeal.com
+@@||sdlcdn.com^*/ads.js$script,domain=snapdeal.com
+! Anti-adblock: realclear
+@@/doubleclick.js$xmlhttprequest,domain=realclearpolitics.com|realclearpolitics.com|realclearhealth.com|realclearreligion.org|realclearenergy.org|realclearhistory.com|realclearpolicy.com|realclearworld.com|realclearmarkets.com|realclearbooks.com|realcleareducation.com|realclearscience.com|realcleardefense.com
+! Adblock-Tracking: vice.com
+@@||web-scripts.vice.com/ad.vice.com/$script,domain=vice.com
+! Anti-adblock: dianomi-anti-adblock
+@@||reuters.com/ads.js$script,domain=reuters.com
+@@/ad-time/*$image,domain=golem.de|pcwelt.de|reuters.com|formel1.de|hardwareluxx.de
+@@||golem.de/*&adserv$script,domain=golem.de
+@@||pcwelt.de/js/advert.js$script,domain=pcwelt.de
+! Anti-adblock: neowin.net
+||mdn.neowin.net^$domain=neowin.net
+! Anti-adblock: grapevine.is
+@@||cloudfront.net/ad/ads.js$script,domain=grapevine.is
+! Anti-adblock: zdnet.de
+@@||zdnet.de^*/advertising.js$script,domain=zdnet.de
+! Anti-adblock: stream2watch.ws
+@@||tellerium.com/showads.js$script,domain=telerium.tv
+! Fix use of salesforce 
+@@||my.salesforce.com^$subdocument,third-party
+@@||salesforce.com/jslibrary/$script,third-party
+! Adblock-Tracking: biblegateway.com
+@@||biblegateway.com/assets/js/ads.js$xmlhttprequest,domain=biblegateway.com
+! Adblock-Tracking: pagesix.com
+@@||wp.com^*/show-ads.js$script,domain=pagesix.com
+! Adblock-Tracking: sourceforge.net / slashdot.org 
+@@||fsdn.com/con/js/adframe.js$script,domain=sourceforge.net
+@@||fsdn.com/sd/js/scripts/ad.js$script,domain=slashdot.org
+! Anti-adblock: wallpapersite.com (https://www.reddit.com/r/hotxp_browser/comments/bx784t/websites_detecting_adblocker_even_when_shield/)
+@@||wallpapersite.com/scripts/ads.js$script,domain=wallpapersite.com
+! Anti-adblock: wallpapershome.com
+@@||wallpapershome.com/scripts/ads.js$script,domain=wallpapershome.com
+! Anti-adblock: nexusmods.com
+@@||nexusmods.com/Contents/Scripts/advert.js$script,domain=nexusmods.com
+! Anti-adblock: haaretz.com
+@@||haaretz.com/htz/js/advertisement.js$script,domain=haaretz.com
+! Anti-adblock: mmo-champion.com
+@@||mmo-champion.com^*/adsense.js$script,domain=mmo-champion.com
+! Anti-adblock: Future INC websites (Cosmetic)
+||ttauri.space.com^$script,domain=space.com
+||ttauri.tomsguide.com^$script,domain=tomsguide.com
+||pcgamer-gb.pcgamer.com^$domain=pcgamer.com
+! Anti-adblock: concert.io (vox sites)
+@@||vox-cdn.com/packs/concert_ads-$script,domain=theverge.com|eater.com|polygon.com|vox.com|sbnation.com|curbed.com|theringer.com|mmafighting.com|racked.com|mmamania.com|funnyordie.com|riftherald.com
+! Anti-adblock: shush.se
+@@||shush.se/_ads.js$script,domain=shush.se
+! Adblock-Tracking: tweakers.net
+||tweakimg.net/x/scripts/min/banners.js$script,domain=tweakers.net
+! Adblock-Tracking: dailystar.co.uk
+@@||dailystar.co.uk^*/ads.js$script,domain=dailystar.co.uk
+! Adblock-Tracking: animeflv.net/animeflv.com
+@@||animeflv.net/js/adsbygoogle.js$script,domain=animeflv.net
+@@||animeflv.com/js/adsbygoogle.js$script,domain=animeflv.com
+! Fix Playback on http://v6.player.abacast.net/6508 (https://community.hotxp.com/t/problem-loading-http-v6-player-abacast-net-6508/71822)
+@@||imasdk.googleapis.com/js/core/$subdocument,domain=player.abacast.net
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=player.abacast.net
+! Potential Tracker, Annoyance
+||govdelivery.com^$third-party
+! Anti-adblock: cellmapper.net
+@@||cellmapper.net/js/ads.js$script,domain=cellmapper.net
+! Anti-adblock: cyberciti.biz
+@@||cyberciti.biz/js/ads.js$script,domain=cyberciti.biz
+! Anti-adblock: mediaite.com
+@@||mediaite.com/adbait/adsbygoogle.js$script,domain=mediaite.com
+! Fix yandex.ru blocking on 3dnews.ru
+||aflt.market.yandex.ru^$script,third-party
+! rambler.ru issues
+@@||myqualification.rambler.ru^$xmlhttprequest,image,stylesheet,domain=gazeta.ru|lenta.ru
+@@||rambler.ru/api/$xmlhttprequest,domain=gazeta.ru
+@@||subscriptions.rambler.ru^$subdocument,script,domain=gazeta.ru
+@@||rambler.ru/widget.js$script,domain=gazeta.ru
+! Adblock-Tracking: gazeta.ru
+@@||gazeta.ru^*/advertising.js$script,domain=gazeta.ru
+! Adblock-Tracking: nytimes.com
+@@||nytimes.com/ads/google/adsbygoogle.js$script,domain=nytimes.com
+! Adblock-Tracking: cpubenchmark.net / videocardbenchmark.net
+@@||videocardbenchmark.net/js/ads.js$script,domain=videocardbenchmark.net
+@@||cpubenchmark.net/js/ads.js$script,domain=cpubenchmark.net
+! Fix digitalriver.com content on various shoping sites.
+@@||api.digitalriver.com^$script,third-party
+@@||img.digitalriver.com/store?$script,image,stylesheet,third-party
+@@||img.digitalriver.com/DRHM/$script,image,stylesheet,third-party
+! Anti-adblock: dreamdth.com
+@@||dreamdth.com/js/wutime_adblock/ads.js$script,domain=dreamdth.com
+! Anti-adblock: transparentcalifornia.com
+@@||transparentcalifornia.com/static/js/ads.js$script,domain=transparentcalifornia.com
+! Anti-adblock: theawesomer.com
+@@||theawesomer.com/js/ads.js$script,domain=theawesomer.com
+! Broken search on https://www.capitalone.com/search
+@@||nexus.ensighten.com/capitalone/Bootstrap.js$script,domain=capitalone.com
+! Adblock-Tracking: dslreports.com
+@@||dslr.net/css/ads.js$script,domain=dslreports.com
+! Adblock-Tracking: wired.co.uk
+@@||wired.co.uk/static/js/ads.js$script,domain=wired.co.uk
+! ip-approval bug
+||ip-approval.com^$third-party,domain=mufon.com
+! Anti-adblock: 9anime
+@@||9anime.vip/assets/js/ads.js$script,domain=9anime.vip
+@@||animecdn.xyz/js/ads.js$script,domain=9animes.ru
+! Anti-adblock: securenetsystems.net
+@@||securenetsystems.net/v5/scripts/ads/prebid.js$script,domain=securenetsystems.net
+! Adblock-Tracking: cheatsheet.com
+@@||cheatsheet.com^*/ads.js$script,domain=cheatsheet.com
+! Adblock-Tracking: softonic.com
+@@||sftcdn.net/statics/ads.min.js$xmlhttprequest,domain=softonic.com
+! Anti-adblock: thehindu.com
+@@||thgim.com/static/js/ads.min.js$script,domain=thehindu.com
+! Anti-adblock: brainyquote.com
+@@||brainyquote.com/st/js/3425190/displayad.js$script,domain=brainyquote.com
+! Anti-adblock: notebookcheck.net / notebookcheck.com
+@@||notebookcheck-ru.com/ads.js$script,domain=notebookcheck.net|notebookcheck.com
+@@||static.h-bid.com/prebid/$script,domain=notebookcheck.net|notebookcheck.com
+@@||static.h-bid.com/notebookcheck.net/$script,domain=notebookcheck.net|notebookcheck.com
+! Video playback on maxpreps.com (script source on cbssports.com)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=cbssports.com
+! Fix foxnews video playback
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=foxbusiness.com|foxnews.com
+@@||fncstatic.com/static/isa/app/lib/VisitorAPI.js$script,domain=foxbusiness.com|foxnews.com
+! Anti-adblock: thesaurus.com
+@@||thesaurus.com/assets/ads.js$xmlhttprequest,domain=thesaurus.com
+! Anti-adblock: rarbg
+@@||dyncdn.me^*/showads.js$script,domain=rarbg2019.org|rarbgaccess.org|rarbgmirror.com|rarbgproxied.org|rarbgmirrored.org|rarbgproxied.org|rarbgproxy.org|rarbgprx.org|rarbgto.org|rarbg.to|rarbgunblock.com
+! Adblock-Tracking: thenextweb.com
+@@||thenextweb.com/wp-content/advertisement.js$script,domain=thenextweb.com
+! Adblock-Tracking: tumblr
+@@/assets/scripts/tumblr/dashboard/showads.js$script,~third-party
+! Adblock-Tracking: ieee.org
+@@||ieee.org/assets/dist/js/ads.js$script,domain=ieee.org
+! Adblock-Tracking: motherjones.com
+@@||motherjones.com/wp-content/themes/motherjones/js/ads.min.js$script,domain=motherjones.com
+! Adblock-Tracking: foxnews.com / foxbusiness.com
+||fncstatic.com^*/google-funding-choices.js$script,domain=foxbusiness.com|foxnews.com
+@@||fncstatic.com/static/v/all/js/ads.js$script,domain=foxbusiness.com|foxnews.com
+! redditcommentsearch.com (https://community.hotxp.com/t/redditcommentsearch-doesnt-work-with-shields-on/66496)
+@@||pay.reddit.com/user/$script,domain=redditcommentsearch.com
+! Adblock-Tracking: vg247.com
+@@||vg247.com/wp-content/themes/vg247/scripts/AdsLoad.js$script,domain=vg247.com
+! mailchi.mp form fix (https://github.com/hotxp/hotxp-browser/issues/5522)
+@@||list-manage.com/signup-form/subscribe?$domain=mailchi.mp
+@@||list-manage.com/signup-form/settings?$domain=mailchi.mp
+! Allow sites to use signup forms from list-manage
+@@||list-manage.com/subscribe/$script,third-party
+! Anti-adblock: indiatimes.com
+@@||indiatimes.com/ads.cms$script,domain=indiatimes.com
+@@/ad-banner-zedo/*$image,domain=indiatimes.com
+@@||timesofindia.indiatimes.com/acms/$xmlhttprequest,domain=indiatimes.com
+! Adblock-Tracking:indiatoday.in
+@@||indiatoday.in/sites/all/modules/custom/itg_ads_blocker/js/ads.js$script,domain=indiatoday.in
+! Adblock-Tracking: amazon.com + amazon regional
+@@||media-amazon.com^*/showads.$script,third-party
+! Adblock-Tracking: salon.com
+@@||salon.com/design/assets/ads.js$script,domain=salon.com
+! Adblock-Tracking: rocket-league.com
+@@||rocket-league.com/scripts/advert.js$script,domain=rocket-league.com
+! Anti-adblock: Instart
+||nanovisor.io/i10c@p1^$xmlhttprequest,domain=webmd.com|gamespot.com
+||x2py3z.kgy.pockettactics.com^$xmlhttprequest,domain=pockettactics.com
+||9j7blw.jba.tribunnews.com^$xmlhttprequest,domain=tribunnews.com
+||sdad.guru/i10c@p1^$xmlhttprequest,domain=webmd.com
+||vxq18c.g02.ign.com^$script,domain=ign.com
+||earzxzsl.g02.ign.com^$subdocument,domain=ign.com
+||c-6rtwjumjzx7868x24x78jhzwjuzgfix78x2elx2eitzgqjhqnhpx2esjy.g01.webmd.com^$xmlhttprequest,domain=webmd.com
+||c-9pruhskhx78v49x24vhfx78uhsx78edgvx2ejx2egrx78eohfolfnx2eqhw.g01.webmd.com^$xmlhttprequest,domain=webmd.com
+||c-5uwzmx78pmca09x24amkczmx78cjilax2eox2elwcjtmktqksx2evmb.g00.gamespot.com^$script,domain=gamespot.com
+! Adblock-Tracking: infowars.com
+@@||infowars.com/ads.js$script,domain=infowars.com
+! ebay.co.uk + ebay.com and other ebay regions (https://github.com/hotxp/hotxp-browser/issues/5019)
+@@||ebay.com/experience/listing_auto_complete/$xmlhttprequest
+! ebay image upload issue (https://github.com/hotxp/hotxp-browser/issues/5190)
+@@||ebay.com/ws/$xmlhttprequest
+! api.ebay.com (https://community.hotxp.com/t/referral-not-getting-download-and-comfirmed/75898)
+@@||api.ebay.com^$xmlhttprequest,subdocument
+! Adblock Tracking: thetimes.co.uk
+@@||thetimes.co.uk/d/js/ads-$script,domain=thetimes.co.uk
+! Anti-adblock: xiaomitoday.com
+@@||xiaomitoday.com/wp-content/themes/jannah/assets/js/advertisement.js$script,domain=xiaomitoday.com
+! fix first-party items on maxmind.com (https://community.hotxp.com/t/stop-blocking-the-website-for-maxmind-com/68326)
+@@||blog.maxmind.com^$~third-party
+@@||static.maxmind.com^$~third-party
+! Fix Mailchimp stylesheet issued (https://www.fallingsquirrel.com/post/the-demo-is-here)
+@@||mailchimp.com/embedcode/$stylesheet
+! bandai-hobby.net (maxmind check causing blank pages)
+@@||js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js$script,domain=bandai-hobby.net
+@@||geoip-js.maxmind.com/geoip/$xmlhttprequest,domain=bandai-hobby.net
+! ABP Japanese blocking: Google
+@@||googleusercontent.com/videoplayback?$domain=google.com
+@@||googlevideo.com/videoplayback?$xmlhttprequest,domain=youtube.com
+! ABP Japanese blocking Aliexpress (https://github.com/k2jp/abp-japanese-filters/issues?utf8=✓&q=is%3Aissue+aliexpress)
+@@||aliexpress.com^$~third-party
+! Anti-adblock: laptopmedia.com
+@@||laptopmedia.com/ads.js$script,domain=laptopmedia.com
+! Anti-adblock: ratemyteachers.com
+@@||ratemyteachers.com/ads.js$script,domain=ratemyteachers.com
+! Anti-adblock: nbc.com
+@@||nbc.com/generetic/scripts/ads.js$script,domain=nbc.com
+! Anti-adblock: cnbc.com
+@@||cnbc.com/staticContent/showads.js$script,domain=cnbc.com
+! Allow reddit extensions to be used
+@@||reddit.com/r/$script,domain=deora.dev
+@@||reddit.com/comments/$domain=batcommunity.org
+! Adblock-Tracking: buzzfeed.com / buzzfeednews.com
+@@||buzzfeed.com/static/js/advertiser/ads.js$script,domain=buzzfeednews.com|buzzfeed.com
+! Adblock-Tracking: phandroid.com
+@@||phandroid.com/ads.js$script,domain=phandroid.com
+! Adblock-Tracking: idg sites 
+@@||networkworld.com/www/js/ads/ads.js$script,domain=networkworld.com
+@@||techadvisor.fr/scripts/ads.js$script,domain=techadvisor.fr
+@@||pcworld.com/www/js/ads/ads.js$script,domain=pcworld.com
+@@||techconnect.com/www/js/ads/ads.js$script,domain=techconnect.com
+@@||cio.com/www/js/ads/ads.js$script,domain=cio.com
+@@||csoonline.com/www/js/ads/ads.js$script,domain=csoonline.com
+@@||infoworld.com/www/js/ads/ads.js$script,domain=infoworld.com
+@@||itwhitepapers.com/www/js/ads/ads.js$script,domain=itwhitepapers.com
+@@||javaworld.com/www/js/ads/ads.js$script,domain=javaworld.com
+! Adblock-Tracking: idg UK sites
+@@||techadvisor.co.uk/scripts/ads.js$script,domain=techadvisor.co.uk
+@@||macworld.co.uk/scripts/ads.js$script,domain=macworld.co.uk
+@@||digitalartsonline.co.uk/scripts/ads.js$script,domain=digitalartsonline.co.uk
+@@||cio.co.uk/scripts/ads.js$script,domain=cio.co.uk
+@@||techworld.com/scripts/ads.js$script,domain=techworld.com
+! Anti-adblock: dagbladet.no
+@@||dagbladet.no^*/prebid.js$script,domain=dagbladet.no
+! Adblock-Tracking: hanime.tv
+@@||hanime.tv/exoclick.ads.$script,domain=hanime.tv
+! Adblock-Tracking: esportsheaven.com
+@@||esportsheaven.com/wp-content/themes/esportsheaven/js/advertisement.js$script,domain=esportsheaven.com
+! adziff ad tracking
+@@||adziff.com/ab/ads.js$xmlhttprequest,domain=pcmag.com|geek.com|extremetech.com
+! Fix nudatasecurity.com (captcha)
+@@||nudatasecurity.com^*/captcha?$image,third-party
+! Anti-adblock: geoguessr.com
+@@||geoguessr.com/_ads/$script,xmlhttprequest,domain=geoguessr.com
+! ssrn.com login fix
+@@||assets.adobedtm.com^$script,domain=ssrn.com
+! thehindu.com (https://github.com/hotxp/hotxp-browser/issues/4808)
+@@||thgim.com/static/js/ads.min.js$script,domain=thehindu.com
+! wp.pl / dobreprogramy.pl (https://github.com/hotxp/hotxp-browser/issues/5456)
+@@||wp.pl/mtgx$script,domain=dobreprogramy.pl
+! wp.pl stylesheet issues on https://prawo.money.pl/
+@@||wp.pl^$stylesheet,third-party
+! gifycat.com ads (https://community.hotxp.com/t/pages-loads-3rd-party-ads-after-page-loads/71472/10)
+||ga.gfycat.com^$script,domain=gfycat.com
+! Anti-adblock tracking: nfl.com
+@@||nflcdn.com^*/ad.js$script,domain=nfl.com
+! Adblock-Tracking: cbc.ca
+@@||cbc.ca/g/stats/js/ads.js$script,domain=cbc.ca
+! Adblock-Tracking: computerbase.de
+@@||computerbase.de/js/ads.$script,xmlhttprequest,domain=computerbase.de
+! Adblock-Tracking: (News corp AU sites)
+@@||tags.news.com.au/prod/adblock/adblock.js$script,domain=foxsports.com.au|kidspot.com.au|cairnspost.com.au|ntnews.com.au|goldcoastbulletin.com.au|townsvillebulletin.com.au|themercury.com.au|news.com.au|taste.com.au|heraldsun.com.au|dailytelegraph.com.au|adelaidenow.com.au|bodyandsoul.com.au|bestrecipes.com.au|whimn.com.au|vogue.com.au|delicious.com.au|escape.com.au|weeklytimesnow.com.au|geelongadvertiser.com.au
+! Adblock-Tracking: MediaNews Group
+@@||townnews.com^*/flex/components/ads/$script,domain=southernchestercountyweeklies.com|dailylocal.com|delcotimes.com|morningjournal.com|delconewsnetwork.com|montgomerynews.com|mainlinemedianews.com|news-herald.com|cnweekly.com|troyrecord.com|southjerseylocalnews.com|saratogian.com|oneidadispatch.com|dailyfreeman.com|trentonian.com|berksmontnews.com|thenewsherald.com|dailytribune.com|theoaklandpress.com|voicenews.com|themorningsun.com|pottsmerc.com|phoenixvillenews.com|timesherald.com|thereporteronline.com|pvnews.com|tbrnews.com|pressandguide.com|gazettes.com|macombdaily.com
+@@/static/js/ads.js$script,domain=redlandsdailyfacts.com|pasadenastarnews.com|dailybulletin.com|marinij.com|montereyherald.com|presstelegram.com|times-standard.com|chicoer.com|whittierdailynews.com|dailydemocrat.com|dailynews.com|ocregister.com|pe.com|buffzone.com|orovillemr.com|journal-advocate.com|reporterherald.com|broomfieldenterprise.com|record-bee.com|sentinelandenterprise.com|bostonherald.com|nashobavalleyvoice.com|eptrail.com|akronnewsreporter.com|willitsnews.com|redbluffdailynews.com|thevalleydispatch.com|twincities.com|burlington-record.com|fortmorgantimes.com|coloradodaily.com|lamarledger.com|timescall.com|canoncitydailyrecord.com|excelsiorcalifornia.com|advocate-news.com|paradisepost.com|redwoodtimes.com|denverpost.com|mendocinobeacon.com
+! rutracker.net (regional)
+||rutrk.org^$domain=rutracker.net
+||betsonsport.ru^$domain=rutracker.net
+! Fix endless loading on epaper.timesgroup.com
+@@||googletagservices.com/tag/js/gpt.js$script,domain=epaper.timesgroup.com
+! Fix nfl.com video playback
+@@||googletagservices.com/tag/js/gpt.js$script,domain=nfl.com
+! Fix twitter images 
+@@||twimg.com^$image,domain=drudgereport.com|batcommunity.org
+! Anti-adblock tracking Prometheus Global Media
+@@||pgmcdn.com/advertisement.js$script,domain=billboard.com|hollywoodreporter.com|vibe.com
+! Adblock tradcking: defenseone.com
+@@||defenseone.com/b/js/adframe.js$script,domain=defenseone.com
+! Anti-adblock: washingtonpost.com
+@@||d2ty8gaf6rmowa.cloudfront.net/ad/$domain=washingtonpost.com
+@@||pubads.g.doubleclick.net^$xmlhttprequest,domain=washingtonpost.com
+! shapeways.com (google-sign)
+@@||plus.google.com/js/$script,domain=shapeways.com
+! Anti-adblock tracking: abc.com
+@@||edgedatg.com^*/ads.min.js$script,domain=abc.com
+! Fix abcnews.go.com video playback
+@@||akamaihd.net/player/2.106.5/akamai/amp/chartbeatanalytics/Chartbeatanalytics.min.js$domain=abcnews.go.com
+! Fix blank page on flipp.com
+@@||wishabi.net^$image,domain=flipp.com
+! Allow ads on DDG: hotxp-browser/issues#4533
+@@||duckduckgo.com/m.js
+@@||duckduckgo.com/share/spice/amazon/
+! Taboola scripts
+-taboola-article.
+-taboola-loader.
+/components/taboola/*
+/modulo/taboola/*
+/taboola-iframe/*
+/taboola.js
+/taboola/footer.
+/taboola/head.
+/taboola_header.
+/taboolaArticleFooter.
+/taboolaArticleHead.
+/taboolaBottomBody.
+/taboolaHead.
+||taboolasyndication.com^$third-party
+! Outbrain scripts
+/cdn-cgi/pe/bag2?*odb.outbrain.com
+/outbrain-load-
+/outbrain.js
+/outbrain/base?
+/outbrain?
+||outbrainimg.com^$third-party
+! Admiral Tracking (for ios)
+||acridtwist.com^$third-party
+||caringzinc.com^$third-party
+||functionalclam.com^$third-party
+||carscannon.com^$third-party
+||coordinatedcub.com^$third-party
+||desiredirt.com^$third-party
+||endurablecrayon.com^third-party
+||forecasttiger.com^$third-party
+||horsenectar.com^$third-party
+||intelligentscissors.com^$third-party
+||jadeitite.com^$third-party
+||leaplunchroom.com^$third-party
+||levelbehavior.com^$third-party
+||lumberamount.com^$third-party
+||magnetairport.com^$third-party
+||nervoussummer.com^$third-party
+||penspade.com^$third-party
+||scrubswim.com^$third-party
+||sicksmash.com^$third-party
+||sombersurprise.com^$third-party
+||squeakzinc.com^$third-party
+||steepsquirrel.com^$third-party
+||untidyrice.com^$third-party
+||spiffymachine.com^$third-party
+||hilariouszinc.com^$third-party
+||ticklesign.com^$third-party
+||profusesupport.com^$third-party
+||6ldu6qa.com^$third-party
+||absorbingband.com^$third-party
+||absurdapple.com^$third-party
+||aheadday.com^$third-party
+||anxiousapples.com^$third-party
+||automaticside.com^$third-party
+||awzbijw.com^$third-party
+||axiomaticalley.com^$third-party
+||balancebreath.com^$third-party
+||bh8yx.xyz^$third-party
+||broadcastbed.com^$third-party
+||broaddoor.com^$third-party
+||butterburst.com^$third-party
+||cannontwin.com^$third-party
+||capsquirrel.com^$third-party
+||cloisteredcord.com^$third-party
+||consciouscabbage.com^$third-party
+||consciouschairs.com^$third-party
+||coordinatedcub.com^$third-party
+||copycarpenter.com^$third-party
+||cubchannel.com^$third-party
+||culturedcrayon.com^$third-party
+||delegatediscussion.com^$third-party
+||detectdiscovery.com^$third-party
+||diplomahawaii.com^$third-party
+||ejyymghi.com^$third-party
+||familiarfloor.com^$third-party
+||familiarrod.com^$third-party
+||farmergoldfish.com^$third-party
+||faultycanvas.com^$third-party
+||fearfulflag.com^$third-party
+||flakyfeast.com^$third-party
+||frailoffer.com^$third-party
+||futuristicfifth.com^$third-party
+||giddycoat.com^$third-party
+||giraffepiano.com^$third-party
+||gorgeousground.com^$third-party
+||greyinstrument.com^$third-party
+||hammerhearing.com^$third-party
+||importedincrease.com^$third-party
+||inquisitiveinvention.com^$third-party
+||jewelcheese.com^$third-party
+||lamplow.com^$third-party
+||lizardslaugh.com^$third-party
+||mowfruit.com^$third-party
+||mundanepollution.com^$third-party
+||pedropanther.com^$third-party
+||perceivequarter.com^$third-party
+||petiteumbrella.com^$third-party
+||photographpan.com^$third-party
+||pietexture.com^$third-party
+||puffyloss.com^$third-party
+||quaintcan.com^$third-party
+||quietknowledge.com^$third-party
+||raresummer.com^$third-party
+||richstring.com^$third-party
+||ritzykey.com^$third-party
+||scintillatingspace.com^$third-party
+||selectivesummer.com^$third-party
+||separatesilver.com^$third-party
+||shallowschool.com^$third-party
+||sharppatch.com^$third-party
+||shelterstraw.com^$third-party
+||shermore.info^$third-party
+||sortsummer.com^$third-party
+||spottysense.com^$third-party
+||spurioussteam.com^$third-party
+||squirrelhands.com^$third-party
+||stiffstem.com^$third-party
+||storesurprise.com^$third-party
+||stormyachiever.com^$third-party
+||strivesidewalk.com^$third-party
+||suddensidewalk.com^$third-party
+||sugarcurtain.com^$third-party
+||tendertest.com^$third-party
+||truthfulturn.com^$third-party
+||typicalteeth.com^$third-party
+||ubiquitousyard.com^$third-party
+||unarmedindustry.com^$third-party
+||unbecominghall.com^$third-party
+||womanear.com^$third-party
+! Chinese specific rules
+/^https?:\/\/asset.bixjf.com\/[0-9]{4}\/[a-z]{2,}\/[0-9].*(.jpg$)/$image,domain=imkan.tv
+/^https?:\/\/asset.bixjf.com\/[0-9]{4}\/ad\/[0-9].*/$domain=imkan.tv
+! 5ch.net (Japanese) Desktop/Mobile IOS/Android-specific blocks
+||thench.net^$third-party
+||mediad2.jp^$third-party
+||microad.net^$third-party
+||ad-stir.com^$third-party
+||proparm.jp^$third-party
+||i2ad.jp^$third-party
+||socdm.com^$third-party
+! Japanese specific rules below (temporarily)
+/ad/alliance_
+/loadPopIn.
+/itsads/*
+||nikkeibp.co.jp/images/n/hr/2018/banner/bnr_
+||sankei2ad.durasite.net^
+||pia.jp/uploads5/files/5415/4478/4511/ticket_bnr03_1.jpg
+||pia.jp/uploads5/files/9215/6082/1152/ticket_top_B3002501906.jpg
+||4gamer.net/img/*_jack_
+||4gamer.net/img/blackdesert_
+||asahicom.jp/ad/
+||r10s.jp/com/rat/js/rat-main.js
+||yomiuri.co.jp/media/2019/06/190530_1000x240_B-002.jpg
+||ismedia.jp/common/money-gendai/images/header/sponsored.png
+||yads.yahoo.co.jp^$third-party
+||addlv.smt.docomo.ne.jp^$third-party
+||chosunonline.com/common/ifr01/$subdocument
+||top.bcdn.jp/i/hd_banner/
+||its-mo.com^$third-party
+||estlier.net^$third-party
+||netmile.co.jp/images/bnr/sugutama_640_120.png
+||netmile.co.jp/user/images/regist-sub-bnr.png
+||potora.jp/images/banner/
+||pt.appirits.com^$third-party
+||potora.jp/myd_top/
+||yads.c.yimg.jp^$third-party
+||logly.co.jp/lift_widget.js
+||yimg.jp^*/loader.js
+||hbb.afl.rakuten.co.jp^$image
+||cvote.a-ch.net^$third-party
+||cheqzone.com^$third-party
+||contents.oricon.co.jp/pc/img/_parts/news/fig-news03.jpg
+||nikkei.com/.resources/static/nad/
+||reemo-ad.jp^$third-party
+||orca-pass.net^$third-party
+||probo.biz^$third-party
+||pitadtag.jp^$third-party
+||itmedia.co.jp/spv/images/career_en_300x250.jpg
+||itmedia.co.jp/spv/images/career_en_320x50.jpg
+||zucks.net^$third-party
+@@||vippers.jp/settings/ad.js
+@@||netmile.co.jp/ad/images/banner/$image
+@@||netmile.co.jp/features/catchpig/images/bnr_120_60.png
+@@||netmile.co.jp/features/furufuru/images/$image
+@@||apple.com^*/promos/$domain=apple.com
+@@||samplefan.com/img/ad/$image
+@@||netmile.co.jp/features/jan/images/bnr_120_60.png
+@@||ad.pr.ameba.jp/tpc/$xmlhttprequest
+@@||amebame.com/pub/ads/$domain=ameblo.jp
+@@||stat100.ameba.jp/blogportal/img/banner/$image
