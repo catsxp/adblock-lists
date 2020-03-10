@@ -22,9 +22,9 @@
 ||aka-cdn-ns.adtech.de^$script,image,domain=aftonbladet.se|expressen.se
 ! Hearst anti-ad blocking fix
 ||aps.hearstnp.com^$script,image
-! stats.hotxp.com
-stats.hotxp.com#@#adsContent
-@@||stats.hotxp.com/local/img/publisher-icons/$domain=stats.hotxp.com
+! stats.catsxp.com
+stats.catsxp.com#@#adsContent
+@@||stats.catsxp.com/local/img/publisher-icons/$domain=stats.catsxp.com
 ! Sailthru native ad aggregator fix
 ||ak.sail-horizon.com^$script,image
 @@||ak.sail-horizon.com/spm/$script,domain=wwe.com
@@ -38,7 +38,7 @@ stats.hotxp.com#@#adsContent
 ! theatlantic.com anti-blocker filters
 ||theatlantic.blueconic.net$domain=theatlantic.com
 ||theatlantic.com/please-support-us^
-! Fix browser lockup on skepticalscience.com (https://github.com/hotxp/hotxp-browser/issues/5406)
+! Fix browser lockup on skepticalscience.com (https://github.com/catsxp/catsxp-browser/issues/5406)
 ||skepticalscience.net/widgets/heat_widget/js/heat_content.js$script,domain=skepticalscience.com
 ! adops.com unusable without this
 @@||adops.com^$~third-party
@@ -69,7 +69,7 @@ stats.hotxp.com#@#adsContent
 ||ctnetload.com^$third-party
 ! Internal reddit API that breaks reddit for many users
 @@||gateway.reddit.com^
-! https://github.com/hotxp/adblock-lists/issues/39
+! https://github.com/catsxp/adblock-lists/issues/39
 @@||alb.reddit.com^
 ! Allow sites to use reddit api
 @@||reddit.com^*.json?$script,xmlhttprequest,third-party
@@ -86,7 +86,7 @@ stats.hotxp.com#@#adsContent
 @@||improving.duckduckgo.com^$~third-party
 ! Disable PDFJS which we include by default's telemetry
 ||pdfjs.robwu.nl
-! Fix for Suicide Prevention Lifeline Chat (hotxp/hotxp-browser#3492)
+! Fix for Suicide Prevention Lifeline Chat (catsxp/catsxp-browser#3492)
 @@||geoplugin.net/javascript.gp$script,xmlhttprequest,domain=suicidepreventionlifeline.org
 ! Block additional trackers
 ||sp1.nypost.com$third-party
@@ -126,9 +126,9 @@ stats.hotxp.com#@#adsContent
 @@||developers.google.com/identity/$image,domain=mysms.com
 ! Adblock-Tracking: speedtest.com
 @@||speedtest.net/javascript/ads.js$script,domain=speedtest.net
-! vresp.com (https://community.hotxp.com/t/cant-see-captcha-on-form/67187)
+! vresp.com (https://community.catsxp.com/t/cant-see-captcha-on-form/67187)
 @@||captcha.vresp.com^$domain=lawfirmkpi.com
-! https://community.hotxp.com/t/ad-not-bloked-properly/63628
+! https://community.catsxp.com/t/ad-not-bloked-properly/63628
 ||readthedocs.org/api/v2/sustainability/$script,domain=pyexcel.org
 ! Embedded vidible video's
 @@||vidible.tv/prod/$xmlhttprequest,media,image
@@ -139,7 +139,7 @@ stats.hotxp.com#@#adsContent
 @@||platform.linkedin.com/$tag=linked-in-embeds
 @@||www.linkedin.com/pages-extensions/FollowCompany$tag=linked-in-embeds
 @@||static.licdn.com/sc/p$tag=linked-in-embeds
-! Fix addthis.com issues on rhmodern.com  https://github.com/hotxp/hotxp-browser/issues/3653
+! Fix addthis.com issues on rhmodern.com  https://github.com/catsxp/catsxp-browser/issues/3653
 @@||s7.addthis.com^$script,domain=rhmodern.com
 ! Fix video playback on ctv.ca
 @@||license.9c9media.ca^$xmlhttprequest,domain=ctv.ca
@@ -162,11 +162,11 @@ stats.hotxp.com#@#adsContent
 @@||godaddy.com/signups/$subdocument
 ! Adblock-Tracking: cbs sites
 @@||cbsistatic.com^*/advertisement*.js$script,domain=zdnet.com|techrepublic.com
-! Fix https://github.com/hotxp/hotxp-browser/issues/4507 (mirrors uBO fix, rewritten so that hotxp/ad-block supports)
+! Fix https://github.com/catsxp/catsxp-browser/issues/4507 (mirrors uBO fix, rewritten so that catsxp/ad-block supports)
 ! Adblock-Tracking: videoadex.com
 @@||videoadex.com/jw/advertisement.js$domain=techradar.com|gamesradar.com
 ||washingtonpost.com/pb/api/*/adblocker-feature$xmlhttprequest,first-party
-! Fix blankpage issue https://github.com/hotxp/hotxp-browser/issues/4049
+! Fix blankpage issue https://github.com/catsxp/catsxp-browser/issues/4049
 ||dianomi.com/cgi-bin/smartads.pl$xmlhttprequest,domain=inc.com
 ! Fix onesignal.com example push notifications
 @@||googletagmanager.com/gtm.js$script,domain=onesignal.com
@@ -192,7 +192,7 @@ stats.hotxp.com#@#adsContent
 @@||explosm.net/js/adsense.js$script,domain=explosm.net
 ! Adblock-Tracking:  mediaite.com
 @@||mediaite.com^*/adsbygoogle.js$script,domain=mediaite.com
-! Broken video playback on tn.com.ar (https://community.hotxp.com/t/the-blocker-does-not-allow-you-to-watch-the-video/76691)
+! Broken video playback on tn.com.ar (https://community.catsxp.com/t/the-blocker-does-not-allow-you-to-watch-the-video/76691)
 @@||googletagmanager.com/gtm.js$script,domain=tn.com.ar
 ! Adblock-Tracking: silvergames.com
 @@||veedi.com^*/advert.js$script,domain=veedi.com
@@ -200,7 +200,7 @@ stats.hotxp.com#@#adsContent
 @@||thedailybeast.com/static/advert.js$script,domain=thedailybeast.com
 ! Adblock-Tracking: snapdeal.com
 @@||sdlcdn.com^*/ads.js$script,domain=snapdeal.com
-! myer.com.au (https://github.com/hotxp/hotxp-browser/issues/8434)
+! myer.com.au (https://github.com/catsxp/catsxp-browser/issues/8434)
 @@||digitalexperience.ibm.com^$image,xmlhttprequest,domain=myer.com.au
 ! Anti-adblock: realclear
 @@/doubleclick.js$xmlhttprequest,domain=realclearpolitics.com|realclearpolitics.com|realclearhealth.com|realclearreligion.org|realclearenergy.org|realclearhistory.com|realclearpolicy.com|realclearworld.com|realclearmarkets.com|realclearbooks.com|realcleareducation.com|realclearscience.com|realcleardefense.com
@@ -240,7 +240,7 @@ stats.hotxp.com#@#adsContent
 ! Adblock-Tracking: sourceforge.net / slashdot.org 
 @@||fsdn.com/con/js/adframe.js$script,domain=sourceforge.net
 @@||fsdn.com/sd/js/scripts/ad.js$script,domain=slashdot.org
-! Anti-adblock: wallpapersite.com (https://www.reddit.com/r/hotxp_browser/comments/bx784t/websites_detecting_adblocker_even_when_shield/)
+! Anti-adblock: wallpapersite.com (https://www.reddit.com/r/catsxp_browser/comments/bx784t/websites_detecting_adblocker_even_when_shield/)
 @@||wallpapersite.com/scripts/ads.js$script,domain=wallpapersite.com
 ! Anti-adblock: wallpapershome.com
 @@||wallpapershome.com/scripts/ads.js$script,domain=wallpapershome.com
@@ -265,7 +265,7 @@ stats.hotxp.com#@#adsContent
 ! Adblock-Tracking: animeflv.net/animeflv.com
 @@||animeflv.net/js/adsbygoogle.js$script,domain=animeflv.net
 @@||animeflv.com/js/adsbygoogle.js$script,domain=animeflv.com
-! Fix Playback on http://v6.player.abacast.net/6508 (https://community.hotxp.com/t/problem-loading-http-v6-player-abacast-net-6508/71822)
+! Fix Playback on http://v6.player.abacast.net/6508 (https://community.catsxp.com/t/problem-loading-http-v6-player-abacast-net-6508/71822)
 @@||imasdk.googleapis.com/js/core/$subdocument,domain=player.abacast.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=player.abacast.net
 ! Potential Tracker, Annoyance
@@ -355,11 +355,11 @@ stats.hotxp.com#@#adsContent
 ! Anti-adblock message (fundingchoices)
 ||fundingchoicesmessages.google.com^$3p,badfilter
 ||fundingchoicesmessages.google.com^$xmlhttprequest
-! redditcommentsearch.com (https://community.hotxp.com/t/redditcommentsearch-doesnt-work-with-shields-on/66496)
+! redditcommentsearch.com (https://community.catsxp.com/t/redditcommentsearch-doesnt-work-with-shields-on/66496)
 @@||pay.reddit.com/user/$script,domain=redditcommentsearch.com
 ! Adblock-Tracking: vg247.com
 @@||vg247.com/wp-content/themes/vg247/scripts/AdsLoad.js$script,domain=vg247.com
-! Allow sites to use signup forms from list-manage (https://github.com/hotxp/hotxp-browser/issues/5522)
+! Allow sites to use signup forms from list-manage (https://github.com/catsxp/catsxp-browser/issues/5522)
 @@||list-manage.com/signup-form/subscribe?$script,third-party
 @@||list-manage.com/signup-form/settings?$script,third-party
 @@||list-manage.com/subscribe/$script,third-party
@@ -387,17 +387,17 @@ stats.hotxp.com#@#adsContent
 ||c-5uwzmx78pmca09x24amkczmx78cjilax2eox2elwcjtmktqksx2evmb.g00.gamespot.com^$script,domain=gamespot.com
 ! Adblock-Tracking: infowars.com
 @@||infowars.com/ads.js$script,domain=infowars.com
-! ebay.co.uk + ebay.com and other ebay regions (https://github.com/hotxp/hotxp-browser/issues/5019)
+! ebay.co.uk + ebay.com and other ebay regions (https://github.com/catsxp/catsxp-browser/issues/5019)
 @@||ebay.com/experience/listing_auto_complete/$xmlhttprequest
-! ebay image upload issue (https://github.com/hotxp/hotxp-browser/issues/5190)
+! ebay image upload issue (https://github.com/catsxp/catsxp-browser/issues/5190)
 @@||ebay.com/ws/$xmlhttprequest
-! api.ebay.com (https://community.hotxp.com/t/referral-not-getting-download-and-comfirmed/75898)
+! api.ebay.com (https://community.catsxp.com/t/referral-not-getting-download-and-comfirmed/75898)
 @@||api.ebay.com^$xmlhttprequest,subdocument
 ! Adblock Tracking: thetimes.co.uk
 @@||thetimes.co.uk/d/js/ads-$script,domain=thetimes.co.uk
 ! Anti-adblock: xiaomitoday.com
 @@||xiaomitoday.com/wp-content/themes/jannah/assets/js/advertisement.js$script,domain=xiaomitoday.com
-! fix first-party items on maxmind.com (https://community.hotxp.com/t/stop-blocking-the-website-for-maxmind-com/68326)
+! fix first-party items on maxmind.com (https://community.catsxp.com/t/stop-blocking-the-website-for-maxmind-com/68326)
 @@||blog.maxmind.com^$~third-party
 @@||static.maxmind.com^$~third-party
 ! Fix Mailchimp stylesheet issued (https://www.fallingsquirrel.com/post/the-demo-is-here)
@@ -483,9 +483,9 @@ stats.hotxp.com#@#adsContent
 @@||geoguessr.com/_ads/$script,xmlhttprequest,domain=geoguessr.com
 ! ssrn.com login fix
 @@||assets.adobedtm.com^$script,domain=ssrn.com
-! thehindu.com (https://github.com/hotxp/hotxp-browser/issues/4808)
+! thehindu.com (https://github.com/catsxp/catsxp-browser/issues/4808)
 @@||thgim.com/static/js/ads.min.js$script,domain=thehindu.com
-! gifycat.com ads (https://community.hotxp.com/t/pages-loads-3rd-party-ads-after-page-loads/71472/10)
+! gifycat.com ads (https://community.catsxp.com/t/pages-loads-3rd-party-ads-after-page-loads/71472/10)
 ||ga.gfycat.com^$script,domain=gfycat.com
 ! Anti-adblock tracking: nfl.com
 @@||nflcdn.com^*/ad.js$script,domain=nfl.com
@@ -530,7 +530,7 @@ stats.hotxp.com#@#adsContent
 @@||akamaihd.net/player/2.106.5/akamai/amp/chartbeatanalytics/Chartbeatanalytics.min.js$domain=abcnews.go.com
 ! Fix blank page on flipp.com
 @@||wishabi.net^$image,domain=flipp.com
-! Allow ads on DDG: hotxp-browser/issues#4533
+! Allow ads on DDG: catsxp-browser/issues#4533
 @@||duckduckgo.com/m.js
 @@||duckduckgo.com/share/spice/amazon/
 ! Taboola scripts

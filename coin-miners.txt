@@ -4,8 +4,8 @@
 ! Expires: 2 days (update frequency)
 ! Version: 44
 ! Last modified: 19 Mar 2018
-! Homepage: https://github.com/hotxp/adblock-lists
-! Contribute: https://github.com/hotxp/adblock-lists/issues
+! Homepage: https://github.com/catsxp/adblock-lists
+! Contribute: https://github.com/catsxp/adblock-lists/issues
 ! License: MPL-2.0
 ! Description: This filter disables browser based miners such as coin-hive. Many rules borrowed from https://github.com/hoshsadiq/adblock-nocoin-list
 !-------------------------------------------------------------------------------
