@@ -446,14 +446,19 @@ hardwareluxx.de,formel1.de,reuters.com,golem.de,finanzen.net,autobild.de,gamesta
 |http:*-ad^$badfilter
 |https:*-ad^$badfilter
 |https:*-ad_$badfilter
+/annotations_$badfilter,domain=youtube.com
+/watch_autoplayrenderer.$badfilter,script,domain=youtube.com
+||youtube.com/set_awesome?$badfilter,domain=youtube.com
+||youtube.com/youtubei/$badfilter,domain=youtube.com
+||s.youtube.com^$badfilter,domain=youtube.com
+||s2.youtube.com^$badfilter,domain=youtube.com
 ! ABP Japanese blocking: Google
 ||youtube.com/youtubei/$domain=youtube.com,badfilter
 ||youtube.com/api/stats/$domain=youtube.com,badfilter
 @@||googleusercontent.com/videoplayback?$domain=google.com
 @@||youtube.com^*/watch_autoplayrenderer.js$script,domain=youtube.com
 @@||youtube.com/yts/jsbin/*-pagead-$script,domain=youtube.com
-@@||youtube.com/s/player/$script,stylesheet,domain=youtube.com
-@@||m.youtube.com/s/player/$script,stylesheet,domain=youtube.com
+@@||youtube.com^*/ad.js
 @@||googlevideo.com/videoplayback?$xmlhttprequest,domain=youtube.com
 ! ABP Japanese blocking: Youtube (reverse ABP-JPN filters)
 |http:*?*&ip=$third-party,badfilter
