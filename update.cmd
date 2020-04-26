@@ -1,3 +1,3 @@
 cd /d E:\catsxp-browser
 set /p srcpath=path:
-npm run rename -- --from=%srcpath% --to=%~dp0
+npm run rename -- --from=%srcpath% --to=E:\adblock-lists
