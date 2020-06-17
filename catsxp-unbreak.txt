@@ -22,6 +22,10 @@
 ||aka-cdn-ns.adtech.de^$script,image,domain=aftonbladet.se|expressen.se
 ! Hearst anti-ad blocking fix
 ||aps.hearstnp.com^$script,image
+! catsxp.com specfic filters
+@@||ads.catsxp.software^$first-party
+@@||ads.catsxpsoftware.com^$first-party
+@@||ads.catsxp.com^$first-party
 ! stats.catsxp.com
 stats.catsxp.com#@#adsContent
 @@||stats.catsxp.com/local/img/publisher-icons/$domain=stats.catsxp.com
@@ -526,6 +530,8 @@ blockadblock.com##+js(nobab)
 @@||abs.twimg.com/emoji/$image,third-party
 @@||pbs.twimg.com/profile_images/$image,third-party
 @@||pbs.twimg.com/amplify_video_thumb/$image,third-party
+! mycima.me
+mycima.me##+js(acis, Math, zfgloaded)
 ! Anti-adblock tracking Prometheus Global Media
 @@||pgmcdn.com/advertisement.js$script,domain=billboard.com|hollywoodreporter.com|vibe.com
 ! Adblock tradcking: defenseone.com
