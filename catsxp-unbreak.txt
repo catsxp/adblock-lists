@@ -2,24 +2,6 @@
 @@||adm.fwmrm.net^*/AdManager.js$domain=msnbc.com|sky.com|cnbc.com
 ||novately.com^$third-party
 ||webspectator.com^$third-party
-! Twitch main video
-||cloudfront.net/esf.js$domain=twitch.tv
-! LA Times forced-whitelisting modal fix
-||tribdss.com/meter/assets$script,domain=www.latimes.com
-! LA Times and Chicago Tribune native ads fixes
-||aggrego.org^$script,image,domain=latimes.com|chicagotribune.com
-||jadserve.postrelease.com^$script,image,domain=latimes.com|chicagotribune.com
-||troncdata.com^$script,image,domain=latimes.com
-||polarmobile.com^$script,image,domain=latimes.com|chicagotribune.com
-||ntv.io^$script,image,domain=latimes.com|chicagotribune.com
-! Expressen.se and aftonbladet.set ad blocking evasion fix
-||biowebb-data.s3.amazonaws.com^$script,image,domain=expressen.se|aftonbladet.se
-||richmetrics.com^$script,image,domain=expressen.se|aftonbladet.se
-||adtomafusion.net^$script,image,domain=expressen.se|aftonbladet.se
-||ld1.lpbeta.com^$script,image,domain=expressen.se|aftonbladet.se
-||csp.screen9.com^$script,image,domain=expressen.se|aftonbladet.se
-||glimr.io^$script,image,domain=expressen.se|aftonbladet.se
-||aka-cdn-ns.adtech.de^$script,image,domain=aftonbladet.se|expressen.se
 ! Hearst anti-ad blocking fix
 ||aps.hearstnp.com^$script,image
 ! catsxp.com specfic filters
@@ -54,14 +36,14 @@ forbes.com#@#.AD-label300x250
 ||theatlantic.blueconic.net$domain=theatlantic.com
 ||theatlantic.com/please-support-us^
 ! youtube ads
-youtube.com##+js(json-prune, [].playerResponse.adPlacements)
-youtube.com##+js(json-prune, [].playerResponse.playerAds)
-youtube.com##+js(json-prune, playerResponse.adPlacements)
-youtube.com##+js(json-prune, playerResponse.playerAds)
-youtube.com##+js(json-prune, adPlacements)
-youtube.com##+js(json-prune, playerAds)
-youtube.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
-youtube.com##+js(set, playerResponse.adPlacements undefined)
+youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements)
+youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.playerAds)
+youtube.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements)
+youtube.com,youtube-nocookie.com##+js(json-prune, playerResponse.playerAds)
+youtube.com,youtube-nocookie.com##+js(json-prune, adPlacements)
+youtube.com,youtube-nocookie.com##+js(json-prune, playerAds)
+youtube.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
+youtube.com,youtube-nocookie.com##+js(set, playerResponse.adPlacements undefined)
 ! Fix browser lockup on skepticalscience.com (https://github.com/catsxp/catsxp-browser/issues/5406)
 ||skepticalscience.net/widgets/heat_widget/js/heat_content.js$script,domain=skepticalscience.com
 ! adops.com unusable without this
@@ -114,6 +96,7 @@ twitter.com##[style]>div>div>[data-testid=placementTracking]
 ! List used by Catsxp for preventing social elements from loading
 !
 ! Facebook
+||graph.facebook.com^$third-party,domain=~atlassolutions.com|~facebook.com|~facebook.de|~facebook.fr|~facebook.net|~fb.com|~fb.me|~fbcdn.net|~fbsbx.com|~friendfeed.com|~instagram.com|~internalfb.com|~messenger.com|~oculus.com|~whatsapp.com|~workplace.com
 ||connect.facebook.net^$third-party,domain=~atlassolutions.com|~facebook.com|~facebook.de|~facebook.fr|~facebook.net|~fb.com|~fb.me|~fbcdn.net|~fbsbx.com|~friendfeed.com|~instagram.com|~internalfb.com|~messenger.com|~oculus.com|~whatsapp.com|~workplace.com
 ||connect.facebook.com^$third-party,domain=~atlassolutions.com|~facebook.com|~facebook.de|~facebook.fr|~facebook.net|~fb.com|~fb.me|~fbcdn.net|~fbsbx.com|~friendfeed.com|~instagram.com|~internalfb.com|~messenger.com|~oculus.com|~whatsapp.com|~workplace.com
 ! Facebook Plugins (3rd-party embedded plugins)
@@ -135,6 +118,7 @@ twitter.com##[style]>div>div>[data-testid=placementTracking]
 @@||connect.facebook.net^$tag=fb-embeds
 @@||connect.facebook.com^$tag=fb-embeds
 @@||facebook.com/plugins/$tag=fb-embeds
+@@||graph.facebook.com^$tag=fb-embeds
 ! Twitter embeds
 @@||api.twitter.com^$tag=twitter-embeds
 @@||platform.twitter.com^$tag=twitter-embeds
@@ -289,7 +273,7 @@ theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com
 ! Potential Tracker, Annoyance
 ||govdelivery.com^$third-party
 ! Anti-Catsxp checks
-krunker.io##+js(aopw, navigator.catsxp)
+krunker.io,archive.is,archive.today,archive.vn,archive.fo##+js(aopw, navigator.catsxp)
 ! Anti-adblock: cellmapper.net
 @@||cellmapper.net/js/ads.js$script,domain=cellmapper.net
 ! Anti-adblock: cyberciti.biz
