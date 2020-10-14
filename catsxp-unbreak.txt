@@ -248,6 +248,8 @@ cinemablend.com##+js(abort-on-property-read, __cmpGdprAppliesGlobally)
 @@||fsdn.com/sd/js/scripts/ad.js$script,domain=slashdot.org
 ! Anti-adblock: wallpapersite.com (https://www.reddit.com/r/catsxp_browser/comments/bx784t/websites_detecting_adblocker_even_when_shield/)
 @@||wallpapersite.com/scripts/ads.js$script,domain=wallpapersite.com
+! Anti-adblock: cocomanhua.com (https://community.catsxp.com/t/catsxp-shlieds-doesn-t-work-properly/168535/7)
+@@||cocomanhua.com/js/ad_/$domain=cocomanhua.com
 ! Anti-adblock: wallpapershome.com
 @@||wallpapershome.com/scripts/ads.js$script,domain=wallpapershome.com
 ! Anti-adblock: nexusmods.com
@@ -263,6 +265,8 @@ cinemablend.com##+js(abort-on-property-read, __cmpGdprAppliesGlobally)
 ! Anti-adblock: concert.io (vox sites)
 @@||vox-cdn.com/packs/concert_ads-$script,domain=theverge.com|eater.com|polygon.com|vox.com|sbnation.com|curbed.com|theringer.com|mmafighting.com|racked.com|mmamania.com|funnyordie.com|riftherald.com
 theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com,mmafighting.com,racked.com,mmamania.com,funnyordie.com,riftherald.com##+js(nostif, adsBlocked)
+theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com,mmafighting.com,racked.com,mmamania.com,funnyordie.com,riftherald.com##.adblock-allowlist-messaging__wrapper
+||concert.io/lib/adblock/$subdocument
 ! Anti-adblock: shush.se
 @@||shush.se/_ads.js$script,domain=shush.se
 ! Adblock-Tracking: tweakers.net
