@@ -214,6 +214,8 @@ twitter.com##[style]>div>div>[data-testid=placementTracking]
 @@||braze.com^$third-party,domain=blockfi.com
 ! Broken video playback on tn.com.ar (https://community.catsxp.com/t/the-blocker-does-not-allow-you-to-watch-the-video/76691)
 @@||googletagmanager.com/gtm.js$script,domain=tn.com.ar
+! uptostream
+uptostream.com##+js(acis, window.a)
 ! ebay portscanning script
 ebay.com,ebay-kleinanzeigen.de##+js(acis, tmx_post_session_params_fixed)
 ! megaup.net
@@ -270,6 +272,11 @@ cinemablend.com##+js(abort-on-property-read, __cmpGdprAppliesGlobally)
 ||ttauri.space.com^$script,domain=space.com
 ||ttauri.tomsguide.com^$script,domain=tomsguide.com
 ||pcgamer-gb.pcgamer.com^$domain=pcgamer.com
+! Temp fix for CBS All Access (https://github.com/catsxp/catsxp-browser/issues/12705)
+@@||s0.2mdn.net/instream/video/client.js$script,domain=cbs.com
+@@||adservice.google.com/adsid/integrator.js$script,domain=cbs.com
+@@||tags.tiqcdn.com/utag/cbsi/cbscomsite/prod/utag.js$script,domain=cbs.com
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=cbs.com
 ! Anti-adblock: concert.io (vox sites)
 @@||vox-cdn.com/packs/concert_ads-$script,domain=theverge.com|eater.com|polygon.com|vox.com|sbnation.com|curbed.com|theringer.com|mmafighting.com|racked.com|mmamania.com|funnyordie.com|riftherald.com
 theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com,mmafighting.com,racked.com,mmamania.com,funnyordie.com,riftherald.com##+js(nostif, adsBlocked)
@@ -366,6 +373,8 @@ archive.is,btdig.com,archive.today,archive.vn,archive.fo,archive.md,archive.li,a
 @@||fncstatic.com/static/v/all/js/ads.js$script,domain=foxbusiness.com|foxnews.com
 ! Temp fix for Google funding Yellow Bar (https://github.com/catsxp/catsxp-browser/issues/11945)
 ##div[style*="box-shadow: rgb(136, 136, 136) 0px 0px 12px; color: "]
+! Fix googlefunding issues (Android) https://github.com/uBlockOrigin/uAssets/blob/master/filters/filters.txt#L21331
+||fundingchoicesmessages.google.com^$third-party,badfilter
 ! To counter $ghide in uBO
 geekzone.co.nz,elpais.com,abc.es,lapresse.ca##div[style*="box-shadow: rgb(136, 136, 136) 0px 0px 12px; color: "]
 geekzone.co.nz,elpais.com,abc.es,lapresse.ca##+js(nostif, removeChild(f), 100)
