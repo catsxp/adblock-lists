@@ -216,8 +216,8 @@ twitter.com##[style]>div>div>[data-testid=placementTracking]
 @@||googletagmanager.com/gtm.js$script,domain=tn.com.ar
 ! uptostream
 uptostream.com##+js(acis, window.a)
-! ebay portscanning script
-ebay.com,ebay-kleinanzeigen.de##+js(acis, tmx_post_session_params_fixed)
+! portscanning script
+sciencedirect.com,ebay.com,ebay-kleinanzeigen.de##+js(acis, tmx_post_session_params_fixed)
 ! megaup.net
 megaup.net#@#.adBanner
 ! Anti-adblock: realclear
@@ -262,6 +262,8 @@ cinemablend.com##+js(abort-on-property-read, __cmpGdprAppliesGlobally)
 @@||cocomanhua.com/js/ad_/$domain=cocomanhua.com
 ! Anti-adblock: wallpapershome.com
 @@||wallpapershome.com/scripts/ads.js$script,domain=wallpapershome.com
+! Anti-adblock (Catsxp fix on  https://github.com/catsxp/catsxp-browser/issues/12737)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=motorsport.com
 ! Anti-adblock: nexusmods.com
 @@||nexusmods.com/Contents/Scripts/advert.js$script,domain=nexusmods.com
 ! Anti-adblock: haaretz.com
