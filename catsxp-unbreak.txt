@@ -194,7 +194,8 @@ twitter.com##[style]>div>div>[data-testid=placementTracking]
 ! Broken video playback on tn.com.ar (https://community.catsxp.com/t/the-blocker-does-not-allow-you-to-watch-the-video/76691)
 @@||googletagmanager.com/gtm.js$script,domain=tn.com.ar
 ! uptostream
-uptostream.com##+js(acis, window.a)
+uptostream.com,tirexo.cc##+js(acis, window.a)
+@@||tirexo.cc^$generichide
 ! portscanning script
 sciencedirect.com,ebay.com,ebay-kleinanzeigen.de##+js(acis, tmx_post_session_params_fixed)
 ! megaup.net
@@ -240,11 +241,18 @@ theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com
 ! Potential Tracker, Annoyance
 ||govdelivery.com^$third-party
 ! Anti-Catsxp checks
-krunker.io,btdig.com,archive.is,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archivecaslytosk.onion,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(aopw, navigator.catsxp)
+krunker.io,filecr.com,gugo.site,sybertrek.com,btdig.com,archive.is,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archivecaslytosk.onion,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(aopw, navigator.catsxp)
 archive.is,btdig.com,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(acis, Object.keys)
 archive.is,btdig.com,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(acis, getPrototypeOf)
 archive.is,btdig.com,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(acis, Object.getPrototypeOf)
 archive.is,btdig.com,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(acis, document.cookie, document.location.href)
+! Anti-Catsxp checks (jaysndees.com)
+jaysndees.com##+js(acis, detectBBrowser)
+! Anti-Catsxp checks (bellasephina.com/tecknity.com/ebook-searcher.com)
+bellasephina.com,tecknity.com,ebook-searcher.com##+js(acis, request)
+! y2mate popup 
+y2mate.com##+js(acis, spro)
+y2mate.com##+js(acis, clickAds)
 ! Anti-adblock: cellmapper.net
 @@||cellmapper.net/js/ads.js$script,domain=cellmapper.net
 ! Anti-adblock: cyberciti.biz
