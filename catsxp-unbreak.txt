@@ -19,16 +19,19 @@ stats.catsxp.com#@#adsContent
 ||vidazoo.com/proxy^$third-party
 ||mediabong.net^$third-party
 ||imprvdosrv.com^$third-party
+! https://yab.yomiuri.co.jp/adv/presage/3.html
+@@||yab.yomiuri.co.jp/adv/$first-party
+@@||omicroncdn.net^$domain=yab.yomiuri.co.jp
 ! yt embed exceptions
 @@||youtube.com/yts/jsbin^$domain=thegatewaypundit.com|godlikeproductions.com|techcrunch.com
 ! theatlantic.com anti-blocker filters
 ||theatlantic.blueconic.net$domain=theatlantic.com
 ||theatlantic.com/please-support-us^
 ! youtube ads
-youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements)
-youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.playerAds)
-youtube.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements)
-youtube.com,youtube-nocookie.com##+js(json-prune, playerResponse.playerAds)
+! youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements)
+! youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.playerAds)
+! youtube.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements)
+! youtube.com,youtube-nocookie.com##+js(json-prune, playerResponse.playerAds)
 youtube.com,youtube-nocookie.com##+js(json-prune, adPlacements)
 youtube.com,youtube-nocookie.com##+js(json-prune, playerAds)
 ! Fix browser lockup on skepticalscience.com (https://github.com/catsxp/catsxp-browser/issues/5406)
@@ -177,6 +180,8 @@ twitter.com##[style]>div>div>[data-testid=placementTracking]
 @@||tools.usps.com/go/scripts/tracking.js$script,domain=tools.usps.com
 ! Adblock-Tracking: imgbox.com
 @@||imgbox.com/site_ads.js$script,domain=imgbox.com
+! Fix startpage ads
+startpage.com###gcsa-top
 ! weather.com "Your privacy" dialogbox
 ||weather.com/*.PrivacyDataNotice.$domain=weather.com
 ! thothub.tv (NSFW)
@@ -194,8 +199,8 @@ twitter.com##[style]>div>div>[data-testid=placementTracking]
 ! Broken video playback on tn.com.ar (https://community.catsxp.com/t/the-blocker-does-not-allow-you-to-watch-the-video/76691)
 @@||googletagmanager.com/gtm.js$script,domain=tn.com.ar
 ! uptostream
-uptostream.com,tirexo.cc##+js(acis, window.a)
-@@||tirexo.cc^$generichide
+uptostream.com,tirexo.lol##+js(acis, window.a)
+@@||tirexo.lol^$generichide
 ! portscanning script
 sciencedirect.com,ebay.com,ebay-kleinanzeigen.de##+js(acis, tmx_post_session_params_fixed)
 ! megaup.net
@@ -231,6 +236,8 @@ cinemablend.com##+js(abort-on-property-read, __cmpGdprAppliesGlobally)
 theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com,mmafighting.com,racked.com,mmamania.com,funnyordie.com,riftherald.com##+js(nostif, adsBlocked)
 theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com,mmafighting.com,racked.com,mmamania.com,funnyordie.com,riftherald.com##.adblock-allowlist-messaging__wrapper
 ||concert.io/lib/adblock/$subdocument
+! uBO-redirect work around ovagames.com 
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ovagames.com
 ! Anti-adblock: shush.se
 @@||shush.se/_ads.js$script,domain=shush.se
 ! Adblock-Tracking: tweakers.net
@@ -250,6 +257,9 @@ archive.is,btdig.com,archive.today,archive.vn,archive.fo,archive.md,archive.li,a
 jaysndees.com##+js(acis, detectBBrowser)
 ! Anti-Catsxp checks (bellasephina.com/tecknity.com/ebook-searcher.com)
 bellasephina.com,tecknity.com,ebook-searcher.com##+js(acis, request)
+! Anti-Catsxp checks (uploadbank.com)
+||uploadbank.com/js/checkcatsxp.js
+uploadbank.com##+js(set, XMLHttpRequest, noopFunc)
 ! y2mate popup 
 y2mate.com##+js(acis, spro)
 y2mate.com##+js(acis, clickAds)
@@ -332,6 +342,11 @@ y2mate.com##+js(acis, clickAds)
 ! To counter $ghide in uBO
 geekzone.co.nz,elpais.com,abc.es,lapresse.ca##div[style*="box-shadow: rgb(136, 136, 136) 0px 0px 12px; color: "]
 geekzone.co.nz,elpais.com,abc.es,lapresse.ca##+js(nostif, removeChild(f), 100)
+! all3dp.com (google funding)
+@@||all3dp.com^$generichide
+all3dp.com##.ad-container--loaded
+all3dp.com##.ad-container--horizontal
+all3dp.com##.ad-container__provider
 ! googlefunding popup
 gizbot.com,drivespark.com,goodreturns.in,nativeplanet.com,careerindia.com,click.in,filmibeat.com,boldsky.com##+js(acis, JSON.stringify)
 ! Adblock-Tracking: vg247.com
