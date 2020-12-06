@@ -19,9 +19,11 @@ stats.catsxp.com#@#adsContent
 ||vidazoo.com/proxy^$third-party
 ||mediabong.net^$third-party
 ||imprvdosrv.com^$third-party
-! https://yab.yomiuri.co.jp/adv/presage/3.html
+! CNAME: https://yab.yomiuri.co.jp/adv/presage/3.html
 @@||yab.yomiuri.co.jp/adv/$first-party
 @@||omicroncdn.net^$domain=yab.yomiuri.co.jp
+! CNAME: https://www.imdb.com/video/vi935705113?playlistId=tt1568346
+@@||cloudfront.net^$domain=imdb.com
 ! yt embed exceptions
 @@||youtube.com/yts/jsbin^$domain=thegatewaypundit.com|godlikeproductions.com|techcrunch.com
 ! theatlantic.com anti-blocker filters
@@ -196,6 +198,9 @@ startpage.com###gcsa-top
 @@||neustar.biz^$domain=home.neustar
 ! Blockfi Notifcations
 @@||braze.com^$third-party,domain=blockfi.com
+! Fix livemint.com (anti-adblock)
+livemint.com##+js(aeld, DOMContentLoaded)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=livemint.com
 ! Broken video playback on tn.com.ar (https://community.catsxp.com/t/the-blocker-does-not-allow-you-to-watch-the-video/76691)
 @@||googletagmanager.com/gtm.js$script,domain=tn.com.ar
 ! uptostream
