@@ -39,6 +39,7 @@ youtube.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements)
 youtube.com,youtube-nocookie.com##+js(json-prune, playerResponse.playerAds)
 youtube.com,youtube-nocookie.com##+js(json-prune, adPlacements)
 youtube.com,youtube-nocookie.com##+js(json-prune, playerAds)
+youtube.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
 ! Fix browser lockup on skepticalscience.com (https://github.com/catsxp/catsxp-browser/issues/5406)
 ||skepticalscience.net/widgets/heat_widget/js/heat_content.js$script,domain=skepticalscience.com
 ! adops.com unusable without this
@@ -91,8 +92,6 @@ collegeconfidential.com##body:style(overflow: auto !important; max-height: 1px !
 ||platform.linkedin.com^$third-party
 ||licdn.com^$third-party,domain=~linkedin.com
 @@||licdn.com^$domain=linkedin.com
-! Outbrain
-||outbrain.com^$third-party,domain=~sphere.com
 ! Outbrain elements
 ###around-the-web
 ###g-outbrain
@@ -251,7 +250,13 @@ theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com
 ! uBO-redirect work around ovagames.com 
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ovagames.com
 ! uBO-redirect work around livehindustan.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=livehindustan.com|hindustantimes.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=livehindustan.com
+! uBO-redirect work around hindustantimes.com
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=hindustantimes.com
+! uBO-redirect work around livexlive.com (IOS, Desktop)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=livexlive.com
+@@||www.googletagservices.com/tag/js/gpt.js$script,domain=livexlive.com
+@@||securepubads.g.doubleclick.net^$script,domain=livexlive.com
 ! Fix Playback on http://v6.player.abacast.net/6508 (https://community.catsxp.com/t/problem-loading-http-v6-player-abacast-net-6508/71822)
 @@||imasdk.googleapis.com/js/core/$subdocument,domain=player.abacast.net
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=player.abacast.net
@@ -310,7 +315,7 @@ all3dp.com##.ad-container__provider
 ##.fc-ab-root > .fc-dialog-container
 ! googlefunding popup
 nativeplanet.com,elmundo.es,abc.es,elpais.com,goodreturns.in,drivespark.com,gizbot.com,telva.com,geekzone.co.nz,lapresse.ca,all3dp.com,click.in,filmibeat.com,boldsky.com,careerindia.com##+js(acis, trustedTypes, console)
-nativeplanet.com,elmundo.es,abc.es,elpais.com,goodreturns.in,drivespark.com,gizbot.com,telva.com,lapresse.ca,click.in,filmibeat.com,boldsky.com,careerindia.com##+js(acis, JSON.stringify, instanceof)
+nativeplanet.com,elmundo.es,livejournal.com,abc.es,elpais.com,goodreturns.in,drivespark.com,gizbot.com,telva.com,lapresse.ca,click.in,filmibeat.com,boldsky.com,careerindia.com##+js(acis, JSON.stringify, instanceof)
 ! googlefunding (latimes.com) (fix scroll)
 latimes.com##body:style(overflow: auto !important;)
 ! hide google fc popup and overlay
@@ -740,7 +745,6 @@ mail.ru##.tgb__link
 mail.ru##.trg-banners
 mail.ru##.trg-b-banner
 ! livejournal fix
-||livejournal.naydex.net^$xmlhttprequest,domain=livejournal.com
 livejournal.com##+js(aopr, window.webpackJsonpSSPjs)
 livejournal.com##+js(aopr, webpackJsonpSSPjs)
 ! Chinese specific rules
