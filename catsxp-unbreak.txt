@@ -19,6 +19,9 @@ stats.catsxp.com#@#adsContent
 ||vidazoo.com/proxy^$third-party
 ||mediabong.net^$third-party
 ||imprvdosrv.com^$third-party
+! CNAME: linkvertise.com
+@@||taboola.com/libtrc/linkvertise-link-to/loader.js$domain=linkvertise.com
+@@||taboola.map.fastly.net^$domain=linkvertise.com
 ! CNAME: https://yab.yomiuri.co.jp/adv/presage/3.html
 @@||yab.yomiuri.co.jp/adv/$first-party
 @@||omicroncdn.net^$domain=yab.yomiuri.co.jp
@@ -241,10 +244,11 @@ cinemablend.com##+js(abort-on-property-read, __cmpGdprAppliesGlobally)
 @@||tags.tiqcdn.com/utag/cbsi/cbscomsite/prod/utag.js$script,domain=cbs.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=cbs.com
 ! Anti-adblock: concert.io (vox sites)
-@@||vox-cdn.com/packs/concert_ads-$script,domain=theverge.com|eater.com|polygon.com|vox.com|sbnation.com|curbed.com|theringer.com|mmafighting.com|racked.com|mmamania.com|funnyordie.com|riftherald.com
-theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com,mmafighting.com,racked.com,mmamania.com,funnyordie.com,riftherald.com##+js(nostif, adsBlocked)
-theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com,mmafighting.com,racked.com,mmamania.com,funnyordie.com,riftherald.com##.adblock-allowlist-messaging__wrapper
+chicago.suntimes.com,theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com,mmafighting.com,racked.com,mmamania.com,funnyordie.com,riftherald.com##+js(nostif, adsBlocked)
+chicago.suntimes.com,theverge.com,vox.com,eater.com,polygon.com,sbnation.com,curbed.com,theringer.com,mmafighting.com,racked.com,mmamania.com,funnyordie.com,riftherald.com##.adblock-allowlist-messaging__wrapper
 ||concert.io/lib/adblock/$subdocument
+! uBO-redirect work around vpnstunnel.com
+@@||google.com/adsense/start/images/favicon.ico$image,domain=vpnstunnel.com
 ! uBO-redirect work around ovagames.com 
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ovagames.com
 ! uBO-redirect work around livehindustan.com
@@ -316,7 +320,7 @@ latimes.com##body:style(overflow: auto !important;)
 latimes.com##.fc-dialog-container
 latimes.com##.fc-ab-root
 ! googlefunding (foxnews / foxbusiness)
-||foxnews.com/static/strike/scripts/libs/google.funding.choices.js$script,domain=foxnews.com|foxbusiness.com
+||foxnews.com^*choices.js$script,domain=foxnews.com|foxbusiness.com
 ! Adblock-Tracking: vg247.com
 @@||vg247.com/wp-content/themes/vg247/scripts/AdsLoad.js$script,domain=vg247.com
 ! Anti-adblock: indiatimes.com / timesofindia.com
