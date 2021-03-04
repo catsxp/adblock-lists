@@ -221,8 +221,6 @@ uptostream.com,tirexo.lol##+js(acis, window.a)
 @@||tirexo.lol^$generichide
 ! portscanning script
 sciencedirect.com,ebay.com,ebay-kleinanzeigen.de,tdbank.com##+js(acis, tmx_post_session_params_fixed)
-! 1p Tracking/fingerprinting
-academy.com,att.com,backcountry.com,bestbuy.com,bmoharris.com,buybuybaby.com,cibc.com,discover.com,discovercard.com,eddiebauer.com,finishline.com,fredmeyer.com,groupon.com,kohls.com,macys.com,marshalls.com,mouser.com,pnc.com,publix.com,sierra.com,staples.com,usbank.com##+js(acis, _cf)
 ! megaup.net
 megaup.net#@#.adBanner
 ! Anti-adblock: dianomi-anti-adblock
@@ -269,6 +267,9 @@ chicago.suntimes.com,theverge.com,vox.com,eater.com,polygon.com,sbnation.com,cur
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=player.abacast.net
 ! Potential Tracker, Annoyance
 ||govdelivery.com^$third-party
+! Whatleaks nullifer
+$websocket,domain=whatleaks.com 
+whatleaks.com##+js(acis, init_port_check_waiting)
 ! Anti-Catsxp checks
 krunker.io,filecr.com,lyckansforskola.com,gommonauti.it,gugo.site,sybertrek.com,btdig.com,archive.is,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archivecaslytosk.onion,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(aopw, navigator.catsxp)
 archive.is,btdig.com,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion##+js(acis, document.cookie, document.location.href)
@@ -314,7 +315,7 @@ all3dp.com##.ad-container--loaded
 all3dp.com##.ad-container--horizontal
 all3dp.com##.ad-container__provider
 ! googlefunding popup
-nativeplanet.com,elmundo.es,abc.es,elpais.com,goodreturns.in,drivespark.com,gizbot.com,telva.com,geekzone.co.nz,lapresse.ca,all3dp.com,click.in,filmibeat.com,boldsky.com,careerindia.com##+js(acis, trustedTypes, console)
+nativeplanet.com,elmundo.es,abc.es,elpais.com,goodreturns.in,drivespark.com,gizbot.com,ign.com,uol.com.br,telva.com,geekzone.co.nz,lapresse.ca,all3dp.com,click.in,filmibeat.com,boldsky.com,careerindia.com##+js(acis, trustedTypes, console)
 natlawreview.com,nativeplanet.com,elmundo.es,livejournal.com,abc.es,elpais.com,goodreturns.in,drivespark.com,gizbot.com,telva.com,lapresse.ca,click.in,filmibeat.com,boldsky.com,careerindia.com##+js(acis, JSON.stringify, instanceof)
 ! googlefunding (latimes.com) (fix scroll)
 latimes.com##body:style(overflow: auto !important;)
